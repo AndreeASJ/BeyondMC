@@ -69,11 +69,14 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Copy static assets
+      - name: Verify build output
         run: |
-          mkdir -p out
-          cp -r public/* out/ || true
+          echo "Contents of out directory:"
           ls -la out/
+          echo "Checking for key files:"
+          ls -la out/*.html || echo "No HTML files found"
+          ls -la out/*.png || echo "No PNG files found"
+          ls -la out/*.mp4 || echo "No MP4 files found"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
