@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
+  distDir: 'out',
   images: {
     remotePatterns: [],
     formats: ['image/avif', 'image/webp'],
