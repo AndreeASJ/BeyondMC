@@ -11,8 +11,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/BeyondMC' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/BeyondMC' : '',
 }
 
 export default nextConfig
