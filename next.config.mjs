@@ -9,7 +9,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? '/BeyondMC' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/BeyondMC' : '',
